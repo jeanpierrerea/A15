@@ -12,14 +12,15 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-	width: 800px;
+	width: 99%;
+	max-width: 960px;
 	border: 3px solid #931420;
 	margin: 0px auto 0px auto;
 	background-color: #fffded;
 }
 
 section {
-	width: 525px;
+	width: 65.62%;
 	float: right;
 	padding-right: 20px;
 	padding-left: 20px;
@@ -27,7 +28,7 @@ section {
 }
 
 aside {
-	width: 215px;
+	width: 26.87%;
 	float: right;
 	padding-left: 20px;
 	padding-bottom: 20px;
@@ -40,16 +41,15 @@ aside {
 /* the styles for the header */
 
 header {
+	width: 94%;
 	border-bottom: 3px solid #931420;
-	padding-top: 1.5em; 
-	padding-bottom: 2em;
+	padding: 24px 3%;
 	background: linear-gradient(30deg, #f6bb73 0%, white 35%, white 50%, white 65%, #f6bb73 100%)
 }
 
 header img {
 	float: left;
-	padding-left: 30px;
-	padding-right: 30px;
+
 }
 
 header h2 {
@@ -70,10 +70,11 @@ header h3 {
 }
 #nav_menu ul li {
 	float: left;
+	width: 20%;
 }
 #nav_menu ul li a {
     display: block;
-    width: 160px;
+    
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
@@ -91,6 +92,7 @@ header h3 {
 }
 #nav_menu ul ul li {
 	float: none;
+	width: 100%;
 }
 #nav_menu ul li:hover > ul {
 	display: block;
@@ -162,10 +164,11 @@ section article {
 
 article img {
 	float: right;
-	margin-top: 25px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
+	max-width: 150px 40%;
+	margin-top: 1.25%;
+	margin-left: 1.25%;
+	margin-right: 1.25%;
+	margin-bottom: 1.25%;
 	border: 1px solid black;
 }
 
@@ -216,3 +219,73 @@ footer p {
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
+
+#mobile_menu {
+	display: none;
+}
+
+@media only screen and (max-width: 959px) {
+
+	section h1 {
+		font-size: 135%;
+	}
+
+	section h2 {
+		font-size: 120%;
+	}
+
+	aside h2 {
+		font-size: 120%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	#mobile_menu { 
+		display: block; 
+	}
+
+	#nav_menu {
+		display: none;
+	}
+
+	.slicknav_menu {
+		background-color: #800000 !important;
+	}
+
+	header img {
+		clear: left;
+		align-content: center;
+	}
+
+	section {
+		float: none;
+		width: 90%
+	}
+
+	aside {
+		float: none;
+		padding-left: 10%;
+		padding-right: 10%;
+		width: 90%;
+	}
+
+	article img {
+		max-width: 30%;
+	}
+
+	.asideDiv {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+
+
+@media only screen and (max-width: 479px) {
+	* {
+		font-size: 90%;
+	}
+}
+
+
